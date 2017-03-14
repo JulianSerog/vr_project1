@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour {
 
-	public MainMenuController mainMenu;
-	public Camera initialCamera;
+    public GameObject triangleBreakBtn;
+    public GameObject DiamondBreakBtn;
+    public GameObject scenario1Btn;
+    public GameObject scenario2Btn;
+
+    //TODO: add raycast and point & click triggers to setup game
 
 
 
@@ -20,45 +24,22 @@ public class GameManger : MonoBehaviour {
 	}
 
 	public void startScenario1 () {
-		//set menu and current camera to false
-		mainMenu.gameObject.SetActive(false);
-		initialCamera.gameObject.SetActive(false);
-
 		//load scene layout
 
 	}
 
 	public void startScenario2() {
-		//set menu and current camera to false
-		mainMenu.gameObject.SetActive(false);
-		initialCamera.gameObject.SetActive(false);
-
 		//load scene layout
+
 	}
 
 	public void startDiamondBreak() {
-		//set menu and current camera to false
-		mainMenu.gameObject.SetActive(false);
-		initialCamera.gameObject.SetActive(false);
-
-
 		//load diamond break layout
+
 	}
 
 	public void startTriangleBreak() {
-		//set menu and current camera to false
-		mainMenu.gameObject.SetActive(false);
-		initialCamera.gameObject.SetActive(false);
-
 		//load Triangle Break Layout
-	}
 
-	public void backToMainMenu() {
-		//set other items to inactive
-
-
-		//set main menu and initial camera active
-		mainMenu.gameObject.SetActive(true);
-		initialCamera.gameObject.SetActive(true);
 	}
 }
