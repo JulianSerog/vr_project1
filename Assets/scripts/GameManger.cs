@@ -9,6 +9,8 @@ public class GameManger : MonoBehaviour {
     public GameObject scenario1Btn;
     public GameObject scenario2Btn;
 
+
+
     //TODO: add raycast and point & click triggers to setup game
 
 
@@ -22,24 +24,24 @@ public class GameManger : MonoBehaviour {
 	void Update () {
 		
 	}
-
+	//TODO: remove all pool balls and set up scenarios appropriately
 	public void startScenario1 () {
 		//load scene layout
-
+		Debug.Log("scenario 1 started");
 	}
 
 	public void startScenario2() {
 		//load scene layout
-
+		Debug.Log("scenario 2 started");
 	}
 
 	public void startDiamondBreak() {
 		//load diamond break layout
-
+		Debug.Log("diamond break started");
 	}
 
 	public void startTriangleBreak() {
 		//load Triangle Break Layout
-
+		Debug.Log("triangle break started");
 	}
 }
