@@ -5,6 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour {
 
 	LineRenderer line;
+	public RaycastHit laserHit;
 	// Use this for initialization
 	void Start () {
 		line = gameObject.GetComponent<LineRenderer> ();
@@ -14,7 +15,6 @@ public class Laser : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Ray laser = new Ray (transform.position, transform.up);
-		RaycastHit laserHit;
 		line.SetPosition (0, laser.origin);
 
 		if (Physics.Raycast (laser, out laserHit, 200)) {
