@@ -89,6 +89,7 @@ public class Laser : MonoBehaviour {
 
 	}//Update
 	void OnTriggerEnter(Collider other){
+		
 		if(other.gameObject.tag == "poolBall"){
 			Debug.Log ("I hit a pool Ball");
 			Vector3 v1;
@@ -97,7 +98,9 @@ public class Laser : MonoBehaviour {
 			v1.z = device.velocity.x;
 
 			Debug.Log (device.angularVelocity);
-			other.GetComponent<Rigidbody> ().velocity = v1 * 15;
+
+			//other.GetComponent<Rigidbody> ().velocity = v1 * 15;
+			other.GetComponent<Rigidbody>().AddForceAtPosition(v1*500,laserHit.point);
 			other.GetComponent<Rigidbody> ().angularVelocity = device.angularVelocity*15;
 		}
 	}
