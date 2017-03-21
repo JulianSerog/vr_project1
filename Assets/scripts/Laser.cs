@@ -47,14 +47,18 @@ public class Laser : MonoBehaviour {
 					else cubes[i].GetComponent<Renderer>().material = defaultMat;
 				}
 				//set up scene
-				manager.startTriangleBreak ();
+				if (device.GetHairTriggerDown()){
+					manager.startTriangleBreak ();
+				}
 			} else if (laserHit.collider.name == "Diamond Break Cube") {
 				for(int i = 0; i < cubes.Length; i++) {
 					if(i == 1) cubes[i].GetComponent<Renderer>().material = selected;
 					else cubes[i].GetComponent<Renderer>().material = defaultMat;
 				}
 				//set up scene
-				manager.startDiamondBreak ();
+				if (device.GetHairTriggerDown()){
+					manager.startDiamondBreak ();
+				}
 			} else if (laserHit.collider.name == "Scenario1 Cube") {
 				for(int i = 0; i < cubes.Length; i++) {
 					if(i == 2) cubes[i].GetComponent<Renderer>().material = selected;
@@ -83,9 +87,6 @@ public class Laser : MonoBehaviour {
 				cubes[i].GetComponent<Renderer>().material = defaultMat;
 			}
 		}//else
-
-
-			
 
 	}//Update
 	void OnTriggerEnter(Collider other){

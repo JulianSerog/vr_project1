@@ -38,10 +38,12 @@ public class GameManger : MonoBehaviour {
 	public void startDiamondBreak() {
 		//load diamond break layout
 		Debug.Log("diamond break started");
+		Application.LoadLevel("diamondBreak");
 	}
 
 	public void startTriangleBreak() {
 		//load Triangle Break Layout
 		Debug.Log("triangle break started");
+		Application.LoadLevel("triangleBreak");
 	}
 }
