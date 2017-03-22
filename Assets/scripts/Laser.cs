@@ -65,14 +65,18 @@ public class Laser : MonoBehaviour {
 					else cubes[i].GetComponent<Renderer>().material = defaultMat;
 				}
 				//set up scene
-				manager.startScenario1 ();
+				if (device.GetHairTriggerDown()){
+					manager.startScenario1 ();
+				}
 			} else if (laserHit.collider.name == "Scenario2 Cube") {
 				for(int i = 0; i < cubes.Length; i++) {
 					if(i == 3) cubes[i].GetComponent<Renderer>().material = selected;
 					else cubes[i].GetComponent<Renderer>().material = defaultMat;
 				}
 				//set up scene
-				manager.startScenario2 ();
+				if (device.GetHairTriggerDown()){
+					manager.startScenario2 ();
+				}
 			} else {
 				//remove material from all cubes
 				for(int i = 0; i < cubes.Length; i++) {
