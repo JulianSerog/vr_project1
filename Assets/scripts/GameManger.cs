@@ -8,6 +8,8 @@ public class GameManger : MonoBehaviour {
     public GameObject DiamondBreakBtn;
     public GameObject scenario1Btn;
     public GameObject scenario2Btn;
+	public GameObject scoreObj;
+	public double score;
 
 
 
@@ -17,12 +19,16 @@ public class GameManger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		score = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	public void incScore(){
+		score+=.5f;
+		scoreObj.GetComponent<TextMesh> ().text = "Score: " + score;
 	}
 	//TODO: remove all pool balls and set up scenarios appropriately
 	public void startScenario1 () {
