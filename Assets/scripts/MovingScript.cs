@@ -34,12 +34,15 @@ public class MovingScript : MonoBehaviour {
             // Handle movement via touchpad
             
                 // Move Forward
-                player.transform.position += player.transform.forward * Time.deltaTime * (touchpad.y * 5f);
-				player.transform.position += player.transform.right * Time.deltaTime * (touchpad.x * 5f);
+                player.transform.position += player.transform.forward * Time.deltaTime * (-touchpad.x * 5f);
+				player.transform.position += player.transform.right * Time.deltaTime * (touchpad.y * 5f);
 
                 // Adjust height to terrain height at player positin
                 playerPos = player.transform.position;
-                playerPos.y = Terrain.activeTerrain.SampleHeight(player.transform.position);
+				if(Terrain.activeTerrain != null)
+					playerPos.y = Terrain.activeTerrain.SampleHeight (player.transform.position);
+		
+
                 player.transform.position = playerPos;
         }//if
     }//update
