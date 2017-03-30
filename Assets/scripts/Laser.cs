@@ -18,9 +18,9 @@ public class Laser : MonoBehaviour {
 	public Material defaultMat;
 	public Vector3 stickVelocity;
 	//cube array for shorter code
-	/*public*/ SteamVR_TrackedObject trackedObj;
+	public SteamVR_TrackedObject trackedObj;
 	public SteamVR_Controller.Device device;
-	public GameObject[] cubes;
+	/*public*/ GameObject[] cubes;
 
 	// Use this for initialization
 	void Start () {
@@ -105,10 +105,14 @@ public class Laser : MonoBehaviour {
 		
 		if(other.gameObject.tag == "poolBall"){
 			//Debug.Log ("I hit a pool Ball");
+
+			Debug.Log ("other: " + other.transform.position);
+			Debug.Log ("laser hit: " + laserHit.point);
 			Vector3 v1;
+
 			v1.x = -device.velocity.x;
 			v1.y = device.velocity.y;
-			v1.z = device.velocity.z;
+			v1.z = -device.velocity.z;
 
 			//Debug.Log (device.angularVelocity);
 

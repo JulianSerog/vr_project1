@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{EFDDCDC9-B4CD-FF60-8152-943C51ED2B61}") = "poolPractice", "Assembly-CSharp.csproj", "{ABD1C076-250E-9952-2DFD-A86766026606}"
 EndProject
+Project("{EFDDCDC9-B4CD-FF60-8152-943C51ED2B61}") = "poolPractice", "Assembly-CSharp-Editor.csproj", "{C2D2468B-4EB1-B12B-3E32-FA22674D346D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{ABD1C076-250E-9952-2DFD-A86766026606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABD1C076-250E-9952-2DFD-A86766026606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD1C076-250E-9952-2DFD-A86766026606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D2468B-4EB1-B12B-3E32-FA22674D346D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D2468B-4EB1-B12B-3E32-FA22674D346D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D2468B-4EB1-B12B-3E32-FA22674D346D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D2468B-4EB1-B12B-3E32-FA22674D346D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
